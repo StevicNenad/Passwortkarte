@@ -8,18 +8,10 @@
 </head>
 <body>
     <?php
-        include 'NumRand.php';
-        $table = fillCard(20, 20);
-        $count = 0;
+        include 'CharFill.php';
 
-        for($i = 0; $i < 20; $i++){
-            for($ii = 0; $ii < 20; $ii++){
-                echo $table[$count];
-                if($ii != 19) echo ' | ';
-                $count++;
-            }
-            echo '<br>';
-        }
+        drawAndFillTable();
+        echo "<button onClick=\"window.print()\">Print this page</button>"
     ?>
 </body>
 </html>
