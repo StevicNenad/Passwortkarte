@@ -9,15 +9,16 @@
 <body>
     <?php
         include 'NumRand.php';
-        $table = fillCard(26, 10);
+        $table = fillCard(20, 20);
         $count = 0;
 
-        for($i = 0; $i < 26; $i++){
-            for($ii = 0; $ii < 10; $ii++){
+        for($i = 0; $i < 20; $i++){
+            for($ii = 0; $ii < 20; $ii++){
                 echo $table[$count];
-                if($ii != 9) echo ' | ';
+                if($ii != 19) echo ' | ';
+                $count++;
             }
-            echo '\n';
+            echo '<br>';
         }
     ?>
 </body>
