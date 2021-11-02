@@ -1,7 +1,7 @@
 <?php
-    /*
-    **Function that returns one random character out of 4 possible character types (Uppercase, Lowercase, Numbers and Symbols).
-    */
+    /***
+    ****Function that returns one random character out of 4 possible character types (Uppercase, Lowercase, Numbers and Symbols).
+    ***/
     function charRand(){
         //Every symbol saved in an array. Does not work when using strings instead (symbol gets wrong format)
         $lower = array("q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "y", "x", "c", "v", "b", "n", "m", "ä", "ö", "ü", "é", "è", "à");
@@ -28,5 +28,19 @@
                 break;
         }
         return $chosen_character;
+    }
+
+    /***
+    ****Function that fills an array with random symbols using charRand() and returns it. 
+    ****Takes total number of rows and columns as parameters
+    ***/
+    function createTableArray(int $rows, int $cols){
+        $table = array();
+        
+        //Fills array with symbols
+        for($i = 0; $i < ($rows * $cols); $i++){
+            $table[$i] = charRand();
+        }
+        return $table;
     }
 ?>
