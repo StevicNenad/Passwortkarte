@@ -1,10 +1,18 @@
 <?php
     include 'CharRand.php';
 
+<<<<<<< HEAD
     function generateHeaderFooter($label, $cols){
         $first_char = 0;
         $second_char = 0;
         $third_char = 0;
+=======
+    /****
+    *****Function that generates the Table header and footer. Takes "header" or "footer" and column amount as argument
+    ****/
+    function generateHeaderFooter($label, $cols){
+        $first_char = $second_char = $third_char = 0;
+>>>>>>> 38da25152274a1c78876f010476c9a9ed3329d12
         $head_foot_labeling = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         echo ($label == "header") ? "<thead>" : "<tfoot><tr>";
@@ -32,8 +40,9 @@
         echo ($label == "header") ? "</thead>" : "</tr></tfoot>";
     }
 
-    /***
-    ***/
+    /****
+    *****Function that draws and Fills the Table.
+    ****/
     function drawAndFillTable($rows, $cols){
         $passwordarray = createTableArray($rows, $cols);
         $iterator = 0;
