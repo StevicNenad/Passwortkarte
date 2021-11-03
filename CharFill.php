@@ -1,7 +1,7 @@
 <?php
     include 'CharRand.php';
 
-    function generateHeaderFooter(string $label, int $cols){
+    function generateHeaderFooter($label, $cols){
         $first_char = 0;
         $second_char = 0;
         $third_char = 0;

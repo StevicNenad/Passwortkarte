@@ -34,7 +34,7 @@
     ****Function that fills an array with random symbols using charRand() and returns it. 
     ****Takes total number of rows and columns as parameters
     ***/
-    function createTableArray(int $rows, int $cols){
+    function createTableArray($rows, $cols){
         $table = array();
         
         //Fills array with symbols
