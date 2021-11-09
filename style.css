@@ -39,6 +39,13 @@
   color: white;
   background-color: #232930;
 }
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
 
 @media print {
   .symbol_cell {
