@@ -63,5 +63,18 @@
         }
         generateHeaderFooter("footer", $cols);
         echo "</table>";
+
+        drawUserNoteField();
+    }
+
+    /****
+    *****Function that creates a row where User can type in Website and starting coordinates
+    ****/
+    function drawUserNoteField() {
+        echo "<label class=\"user_notes\">Startkoordinaten (z.B. J7):";
+        for($i = 0; $i <25; $i++) echo "&nbsp;";
+        echo "Website (gmail.com):";
+        for($i = 0; $i <40; $i++) echo "&nbsp;";
+        echo "</br></label>";
     }
 ?>
