@@ -1,7 +1,11 @@
 body {
+  background-color: #3FABAF;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+td{
+  width: max-content;
+  margin: 15px;
+}
 .table {
   display: table;
   text-align: center;
@@ -9,6 +13,28 @@ body {
 }
 .trow {
   display: table-row;
+}
+h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:rgb(238, 121, 37)
+}
+.rowNum {
+  display: table-row;
+
+}
+.formOne{
+  display: table;
+  background-color: #F7EFE5;
+  color: black;
+  text-align: left;
+  padding-top:15px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom:10px;
+}
+.button{
+  float: left;
 }
 .header_footer_cell {
   font-weight: bolder;
@@ -19,29 +45,28 @@ body {
 .row_cell {
   display: table-cell;
   font-weight: bolder;
-  font-size: 14px;
-  padding: 5px;
-  color: white;
-  background-color: #232930;
+  font-size: 22px;
+  padding: 2px;
+  color: black;
+  background-color: #F7EFE5;
 }
 .symbol_cell {
-  display: table-cell;
-  font-size: 12px;
-  padding: 10px;
-  border: 1px solid #ffae16;
+  font-size: 22px;
+  text-align: center;
   background-color: #ff9e16;
+  font-weight: bolder;
 }
 .thead {
+  font-size: 28px;
   display: table-header-group;
   font-weight: bolder;
-  color: white;
-  background-color: #232930;
+  background-color: #F7EFE5;
+  text-align: center;
 }
 .tfoot {
   display: table-footer-group;
   font-weight: bolder;
-  color: white;
-  background-color: #232930;
+  background-color: #F7EFE5;
 }
 .form {
   display: flex;
@@ -50,7 +75,6 @@ body {
   text-align: center;
   min-height: 100vh;
 }
-
 @media print {
   .symbol_cell {
     border: 1px solid black;

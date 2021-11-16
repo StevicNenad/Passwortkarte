@@ -8,7 +8,7 @@
         $first_char = $second_char = $third_char = 0;
         $head_foot_labeling = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-        echo ($label == "header") ? "<thead>" : "<tfoot><tr>";
+        echo ($label == "header") ? "<thead class=\"thead\">" : "<tfoot class=\"thead\"><tr>";
 
         //Loop that creates header and footer labels. Checks if $labels is "header" or "footer" and echoes the proper html command
         //Checks if letter "Z" has been reached and adds an additonal letter: ex. "Z" and then "AA", "ZZ" and then "AAA"
@@ -51,9 +51,9 @@
 
         //Nested for-loop that takes total number of columns and rows as arguments and starts filling the table
         for($line = 1; $line <= $rows; $line++){
-            echo "<tr>";
+            echo "<tr class=\"symbol_cell\">";
             for($cell = 0; $cell <= $cols; $cell++){
-                if($cell == 0) echo "<td class="row_number">" . $line . "</td>";
+                if($cell == 0) echo "<td class=\"row_cell\">" . $line . "</td>";
                 else{
                     echo "<td>" . $passwordarray[$iterator] . "</td>";
                 $iterator++;

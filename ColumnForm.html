@@ -5,24 +5,26 @@
 <title>Passwort Generator</title>
 </head>
 <body>
-<div class="form" >
+<div class="form">
     <div class="formContent">
-        <form action="Main.php" method="POST" >
+
+        <form action="Main.php" class="formOne" method="POST" >
             <table>
-                <tr>
+                <tr class="trow"><h1>Passwortkarte</h1></tr>
+                <tr class="trow">
                     <td class="rowNum">Bitte geben Sie die Anzahl Zeilen an:</td>
                     <td><input type="number" name="row"></td>
                 </tr>
-                <tr>
+                <tr class="trow">
                     <td class="columnNum">Bitte geben Sie die Anzahl Spalten an:</td>
                     <td><input type="number" name="column"></td>
                 </tr>
-                <tr>
+                <tr class="button">
                     <td><input type="reset" name="reset" value="delete"></td>
                     <td><input type="submit" name="sub" value="submit"></td>
                 </tr>
             </table>
-        </form>
+           
     </div>
 </div>
 </body>
