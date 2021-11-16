@@ -53,7 +53,7 @@
         for($line = 1; $line <= $rows; $line++){
             echo "<tr>";
             for($cell = 0; $cell <= $cols; $cell++){
-                if($cell == 0) echo "<td class="row_number">" . $line . "</td>";
+                if($cell == 0) echo "<td class=\"row_number\">" . $line . "</td>";
                 else{
                     echo "<td>" . $passwordarray[$iterator] . "</td>";
                 $iterator++;
@@ -63,5 +63,18 @@
         }
         generateHeaderFooter("footer", $cols);
         echo "</table>";
+
+        drawUserNoteField();
+    }
+
+    /****
+    *****Function that creates a row where User can type in Website and starting coordinates
+    ****/
+    function drawUserNoteField() {
+        echo "<label class=\"user_notes\">Startkoordinaten (z.B. J7):";
+        for($i = 0; $i <25; $i++) echo "&nbsp;";
+        echo "Website (gmail.com):";
+        for($i = 0; $i <40; $i++) echo "&nbsp;";
+        echo "</br></label>";
     }
 ?>

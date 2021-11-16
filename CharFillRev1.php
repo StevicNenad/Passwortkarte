@@ -14,15 +14,14 @@
         //Checks if letter "Z" has been reached and adds an additonal letter: ex. "Z" and then "AA", "ZZ" and then "AAA"
         for($i = 0; $i < $cols; $i++){
             if($i == 0) echo "<div class = \"header_footer_cell\"></div>";
-
             echo "<div class = \"header_footer_cell\">";
 
+            //Checks wether to place a 2nd or 3rd header/footer letter
             if($third_char > 0) echo $head_foot_labeling[$third_char - 1];
             if($second_char > 0) echo $head_foot_labeling[$second_char - 1];
             echo $head_foot_labeling[$first_char];
 
             echo "</div>";
-
             $first_char++;
 
             //Adds a third letter Ex. "AAA"
@@ -63,6 +62,8 @@
             echo "</div>";
         }
         generateHeaderFooter("footer", $cols);
+        echo "<div class =\"trow\">Startkoordinaten (z.B. J7)</div>";
+        echo "<div class =\"trow\">Website (z.B. gmail.com)</div>";
         echo "</div>";
     }
 ?>

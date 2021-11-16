@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        include 'CharFillRev1.php';
+        include 'CharFill.php';
 
         drawAndFillTable($_POST['row'], $_POST['column']);
         echo "<button onClick=\"window.print()\">Print this page</button>"
