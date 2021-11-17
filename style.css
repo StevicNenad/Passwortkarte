@@ -2,26 +2,26 @@ body {
   background-color: #3FABAF;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-td{
-  width: max-content;
-  margin: 15px;
-}
-.table {
-  display: table;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.trow {
-  display: table-row;
-}
 h1{
   margin-top: 0px;
   margin-bottom: 0px;
   color:rgb(238, 121, 37)
 }
+.main_table {
+  text-align: center;
+}
+.trow {
+  display: table-row;
+}
 .rowNum {
   display: table-row;
-
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 .formOne{
   display: table;
@@ -36,14 +36,7 @@ h1{
 .button{
   float: left;
 }
-.header_footer_cell {
-  font-weight: bolder;
-  font-size: 14px;
-  display: table-cell;
-  padding: 10px;
-}
 .row_cell {
-  display: table-cell;
   font-weight: bolder;
   font-size: 22px;
   padding: 2px;
@@ -52,31 +45,47 @@ h1{
 }
 .symbol_cell {
   font-size: 22px;
-  text-align: center;
   background-color: #ff9e16;
   font-weight: bolder;
 }
 .thead {
+  border: 0px;
   font-size: 28px;
-  display: table-header-group;
-  font-weight: bolder;
-  background-color: #F7EFE5;
-  text-align: center;
-}
-.tfoot {
-  display: table-footer-group;
+  padding: 1px;
   font-weight: bolder;
   background-color: #F7EFE5;
 }
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
+.user_notes {
+  padding: 4px;
+  font-size: 22px;
+  background-color: #F7EFE5;
+  text-align: start;
+  font-weight: bolder;
 }
 @media print {
+  .main_table {
+    width: 100%;
+    border:solid #000 !important;
+    font-weight: normal;
+  }
+  td {
+    border:solid #000 !important;
+    border-width:0px 1px 2px 0px !important;
+  }
+  .print_button{
+    display: none;
+  }
+  .thead {
+    font-size: 16px;
+  }
+  .row_cell{
+    font-size: 16px;
+  }
   .symbol_cell {
-    border: 1px solid black;
+    font-size: 12px;
+  }
+  .user_notes {
+    border-collapse: collapse;
+    font-size: 16px;
   }
 }

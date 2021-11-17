@@ -46,7 +46,7 @@
         $passwordarray = createTableArray($rows, $cols);
         $iterator = 0;
 
-        echo "<table>";
+        echo "<table class=\"main_table\">";
         generateHeaderFooter("header", $cols);
 
         //Nested for-loop that takes total number of columns and rows as arguments and starts filling the table
@@ -63,18 +63,17 @@
         }
         generateHeaderFooter("footer", $cols);
         echo "</table>";
-
-        drawUserNoteField();
+        drawUserNoteField($cols);
     }
 
     /****
     *****Function that creates a row where User can type in Website and starting coordinates
     ****/
-    function drawUserNoteField() {
-        echo "<label class=\"user_notes\">Startkoordinaten (z.B. J7):";
-        for($i = 0; $i <25; $i++) echo "&nbsp;";
-        echo "Website (gmail.com):";
-        for($i = 0; $i <40; $i++) echo "&nbsp;";
-        echo "</br></label>";
+    function drawUserNoteField($cols) {
+        echo "<table><tr class=\"user_notes\"><td>Startkoordinaten(z.B.&nbsp;J7):";
+        for($i = 0; $i < 15; $i++) echo "&nbsp;";
+        echo "Website&nbsp;(gmail.com):";
+        for($i = 0; $i < 50; $i++) echo "&nbsp;";
+        echo "</td></tr><table>";
     }
 ?>

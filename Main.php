@@ -12,7 +12,7 @@
         include 'CharFill.php';
 
         drawAndFillTable($_POST['row'], $_POST['column']);
-        echo "<button onClick=\"window.print()\">Print this page</button>"
+        echo "<button class=\"print_button\" onClick=\"window.print()\">Print this page</button>"
     ?>
 </body>
 </html>
