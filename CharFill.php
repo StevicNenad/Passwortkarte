@@ -2,7 +2,7 @@
     include 'CharRand.php';
 
     /****
-    *****Function that generates the Table header and footer. Takes "header" or "footer" and column amount as argument
+    *****Funktion welche Tabellen Header und Footer erstellt. Nimmt "header", "footer", und column anzahl als argument.
     ****/
     function generateHeaderFooter($label, $cols){
         $first_char = $second_char = $third_char = 0;
@@ -10,8 +10,8 @@
 
         echo ($label == "header") ? "<thead class=\"thead\">" : "<tfoot class=\"thead\"><tr>";
 
-        //Loop that creates header and footer labels. Checks if $labels is "header" or "footer" and echoes the proper html command
-        //Checks if letter "Z" has been reached and adds an additonal letter: ex. "Z" and then "AA", "ZZ" and then "AAA"
+        //Loop welcher header und footer label erstellt. Checkt ob $labels, "header" oder "footer" ist und echoet den passenden html command
+        //Checkt ob das zeichen "Z" erreicht wurde und fügt ein zusätzliches zeichen hinzu: bsp. "Z" und dann "AA", "ZZ" danach "AAA"
         for($i = 0; $i < $cols; $i++){
             if($i == 0) echo ($label == "header") ? "<th></th>" : "<td></td>";
             echo ($label == "header") ? "<th>" : "<td>";
@@ -24,13 +24,13 @@
 
             $first_char++;
 
-            //Adds a third letter Ex. "AAA"
+            //Fügt einen dritten Buchstaben hinzu Ex. "AAA"
             if($second_char == 26 && $first_char == 26){
                 $third_char++;
                 $second_char = 1;
                 $first_char = 0;
             }
-            //Adds a second letter Ex. "AA"
+            //Fügt einen zwieten Buchstaben hinzu Ex. "AA"
             else if($first_char == 26){
                 $second_char++;
                 $first_char = 0;
@@ -40,7 +40,7 @@
     }
 
     /****
-    *****Function that draws and Fills the Table.
+    *****Funktion die den Table erstellt und befüllt.
     ****/
     function drawAndFillTable($rows, $cols){
         $passwordarray = createTableArray($rows, $cols);
@@ -49,7 +49,7 @@
         echo "<table class=\"main_table\">";
         generateHeaderFooter("header", $cols);
 
-        //Nested for-loop that takes total number of columns and rows as arguments and starts filling the table
+        //Nested for-loop welcher die totale anzahl an spalten und zeilen als argument nimmt, startet das befüllen der tabelle.
         for($line = 1; $line <= $rows; $line++){
             echo "<tr class=\"symbol_cell\">";
             for($cell = 0; $cell <= $cols; $cell++){
@@ -67,7 +67,7 @@
     }
 
     /****
-    *****Function that creates a row where User can type in Website and starting coordinates
+    *****Funtkion welche ein Feld für die Startposition und Email des Benutzers erstellt.
     ****/
     function drawUserNoteField($cols) {
         echo "<table><tr class=\"user_notes\"><td>Startkoordinaten(z.B.&nbsp;J7):";
