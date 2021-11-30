@@ -72,7 +72,7 @@
     function drawUserNoteField($cols) {
         echo "<table><tr class=\"user_notes\"><td>Startkoordinaten(z.B.&nbsp;J7):";
         for($i = 0; $i < 15; $i++) echo "&nbsp;";
-        echo "Website&nbsp;(gmail.com):";
+        echo "Website&nbsp;(z.B. gmail.com):";
         for($i = 0; $i < 50; $i++) echo "&nbsp;";
         echo "</td></tr><table>";
     }
